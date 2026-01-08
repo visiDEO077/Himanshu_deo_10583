@@ -9,12 +9,12 @@ for(int i=0;i<num_sub;i++){
   scanf("%d",&sub_marks[i]);
   
 }
-int sub=0;
+int sum=0;
 for(int j=0;j<num_sub;j++){
 sum+=sub_marks[j];
 }
-  int max_mark=num_sub*100;
- float percentage = (total * 100.0f) / max_mark;   
+  int max_marks=num_sub*100;
+ float percentage = (sum * 100.0f) / max_marks;   
 
    char grade;               
     if (percentage >= 90) {
@@ -29,7 +29,7 @@ sum+=sub_marks[j];
         grade = 'F';
     }
 
-    printf("\nTotal Marks = %d / %d\n", total, max_marks);
+    printf("\nTotal Marks = %d / %d\n", sum, max_marks);
     printf("Percentage  = %.2f\n", percentage);
     printf("Grade       = %c\n", grade);
 
