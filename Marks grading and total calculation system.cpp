@@ -13,8 +13,27 @@ int sub=0;
 for(int j=0;j<num_sub;j++){
 sum+=sub_marks[j];
 }
-float percentage;
-percentage=(sum/(num_sub*100))*100;
-printf("Total Marks : %d\n",sum);
-printf("Total percentage : %d\n",percentage);
+  int max_mark=num_sub*100;
+ float percentage = (total * 100.0f) / max_mark;   
+
+   char grade;               
+    if (percentage >= 90) {
+        grade = 'A';
+    } else if (percentage >= 80) {
+        grade = 'B';
+    } else if (percentage >= 60) {
+        grade = 'C';
+    } else if (percentage >= 33) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+
+    printf("\nTotal Marks = %d / %d\n", total, max_marks);
+    printf("Percentage  = %.2f\n", percentage);
+    printf("Grade       = %c\n", grade);
+
+    return 0;
+}
+
 
